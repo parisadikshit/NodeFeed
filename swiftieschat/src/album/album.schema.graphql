@@ -1,0 +1,8 @@
+type Album {
+    id: ID!
+    title: String!
+}
+
+type Query {
+    albums: [Album]
+}
