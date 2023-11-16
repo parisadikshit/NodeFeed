@@ -8,4 +8,7 @@ export class Album {
 
     @Field()
     title: string
+
+    @Field( ()=> Date)
+    releaseDate: Date
 }
