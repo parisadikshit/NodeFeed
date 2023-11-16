@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AlbumModule } from './album/album.module';
 import { join } from 'path';
+import { MongooseModule } from '@nestjs/mongoose';
 @Module({
   imports: [
     GraphQLModule.forRoot({
@@ -15,6 +16,7 @@ import { join } from 'path';
         path: join(process.cwd(), "src/graphql.ts"),
       }
     }),
+    MongooseModule.forRoot(process.env.MONGO_URI),
     AlbumModule
   ],
   controllers: [AppController],
