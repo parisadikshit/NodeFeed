@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { AlbumResolver } from './album.resolver';
+import { AlbumResolver } from './resolvers/album.resolver';
 
 @Module({
   imports: [],
