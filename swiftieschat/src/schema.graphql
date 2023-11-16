@@ -2,10 +2,17 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type SongResponse {
+  _id: String!
+  title: String!
+  likes: Float!
+}
+
 type Album {
-  id: Int!
+  _id: String!
   title: String!
   releaseDate: DateTime!
+  songs: [SongResponse!]!
 }
 
 """

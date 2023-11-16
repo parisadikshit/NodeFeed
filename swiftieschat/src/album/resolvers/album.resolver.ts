@@ -8,9 +8,9 @@ export class AlbumResolver {
     getAllAlbums(){
         // return all albums
         let arr: AlbumModel[] = [
-            {id:1,title: 'Taylor Swift', releaseDate:''},
-            {id: 2,title: 'Fearless',releaseDate:''},
-            {id: 3,title: 'Red', releaseDate:''}]
+            {_id:'1',title: 'Taylor Swift', releaseDate:'',songs:[]},
+            {_id: '2',title: 'Fearless',releaseDate:'',songs:[]},
+            {_id: '3',title: 'Red', releaseDate:'',songs:[]}]
         return arr;
     }
 }

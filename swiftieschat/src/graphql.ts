@@ -8,10 +8,17 @@
 /* tslint:disable */
 /* eslint-disable */
 
+export interface SongResponse {
+    _id: string;
+    title: string;
+    likes: number;
+}
+
 export interface Album {
-    id: number;
+    _id: string;
     title: string;
     releaseDate: DateTime;
+    songs: SongResponse[];
 }
 
 export interface IQuery {
