@@ -1,9 +1,10 @@
 import { Query, Resolver } from "@nestjs/graphql";
+import { Album } from "./album.schema";
 
-@Resolver("Album")
+@Resolver(of => Album)
 export class AlbumResolver {
 
-    @Query("albums")
+    @Query(returns => [Album], {name: 'albums'})
     getAllAlbums(){
         // return all albums
         return [

@@ -4,12 +4,13 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AlbumModule } from './album/album.module';
+import { join } from 'path';
 @Module({
   imports: [
     GraphQLModule.forRoot({
       driver: ApolloDriver,
       playground:true,
-      typePaths: ['./**/*.graphql']
+      autoSchemaFile: join(process.cwd(), "src/schema.graphql")
     }),
     AlbumModule
   ],
